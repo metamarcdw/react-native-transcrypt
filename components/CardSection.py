@@ -3,7 +3,7 @@ React = require("react")
 View = require("react-native").View
 
 def CardSection(props):
-    container_style = styles["containerStyle"]
+    container_style, = styles.values()
     return __pragma__("js", "{}", """ (
         <View style={container_style}>
             {props.children}

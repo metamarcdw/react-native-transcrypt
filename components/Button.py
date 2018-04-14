@@ -1,8 +1,8 @@
 from Component_py.stubs import require, __pragma__  # __:skip
+from Component_py.component import destruct
 React = require("react")
-rn = require("react-native"); \
-    Text, TouchableOpacity = \
-    rn.Text, rn.TouchableOpacity
+Text, TouchableOpacity = \
+    destruct(require("react-native"), "Text", "TouchableOpacity")
 
 def Button(props):
     button_style, text_style = styles.values()

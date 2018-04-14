@@ -11,9 +11,12 @@ class AlbumList(Component):
         self.state = { "albums": [] }
 
     def componentDidMount(self):
-        def parse(response): return response.json()
-        def resolve(data): self.setState({ "albums": data })
-        def reject(error): console.log(error)
+        def parse(response):
+            return response.json()
+        def resolve(data):
+            self.setState({ "albums": data })
+        def reject(error):
+            console.log(error)
 
         promise = fetch("https://rallycoding.herokuapp.com/api/music_albums")
         promise.then(parse).then(resolve).catch(reject)

@@ -1,11 +1,10 @@
 from Component_py.stubs import require, __pragma__  # __:skip
+from Component_py.component import destruct
 React = require("react")
-rn = require("react-native"); \
-    Text, View = rn.Text, rn.View
+Text, View = destruct(require("react-native"), "Text", "View")
 
 def Header(props):
-    text_style, view_style = \
-        _s["textStyle"], _s["viewStyle"]
+    view_style, text_style = styles.values()
     return __pragma__("js", "{}", """ (
         <View style={view_style}>
             <Text style={text_style}>{props.header_text}</Text>

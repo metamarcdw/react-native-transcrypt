@@ -5,9 +5,8 @@ from components.CardSection import CardSection
 from components.Button import Button
 
 React = require("react")
-rn = require("react-native"); \
-    View, Text, Image, Linking = \
-    rn.View, rn.Text, rn.Image, rn.Linking
+View, Text, Image, Linking = \
+    destruct(require("react-native"), "View", "Text", "Image", "Linking")
 
 def AlbumDetail(props):
     artist, image, thumbnail_image, title, url = \
