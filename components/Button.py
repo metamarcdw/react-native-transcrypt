@@ -4,6 +4,7 @@ React = require("react")
 Text, TouchableOpacity = \
     destruct(require("react-native"), "Text", "TouchableOpacity")
 
+
 def Button(props):
     button_style, text_style = styles.values()
     return __pragma__("js", "{}", """ (
@@ -15,6 +16,7 @@ def Button(props):
             </Text>
         </TouchableOpacity>
     ); """)
+
 
 styles = {
     "buttonStyle": {

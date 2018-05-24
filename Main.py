@@ -4,6 +4,7 @@ from components.AlbumList import AlbumList
 React = require("react")
 View = require("react-native").View
 
+
 def App():
     return __pragma__("js", "{}", """ (
         <View style={{ "flex": 1 }}>
@@ -11,5 +12,6 @@ def App():
             <AlbumList />
         </View>
     ); """)
+
 
 module.exports = App

@@ -8,6 +8,7 @@ React = require("react")
 View, Text, Image, Linking = \
     destruct(require("react-native"), "View", "Text", "Image", "Linking")
 
+
 def AlbumDetail(props):
     artist, image, thumbnail_image, title, url = \
         destruct(props.album,
@@ -17,7 +18,8 @@ def AlbumDetail(props):
      thumbnail_style,
      thumbnail_container_style,
      image_style) = styles.values()
-    on_press = lambda: Linking.openURL(url)
+
+    def on_press(): return Linking.openURL(url)
 
     return __pragma__("js", "{}", """ (
         <Card>
@@ -48,6 +50,7 @@ def AlbumDetail(props):
             </CardSection>
         </Card>
     ); """)
+
 
 styles = {
     "headerContentStyle": {

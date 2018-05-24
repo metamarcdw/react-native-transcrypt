@@ -2,6 +2,7 @@ from Component_py.stubs import require, __pragma__  # __:skip
 React = require("react")
 View = require("react-native").View
 
+
 def Card(props):
     container_style, = styles.values()
     return __pragma__("js", "{}", """ (
@@ -10,6 +11,7 @@ def Card(props):
         </View>
     ); """)
 
+
 styles = {
     "containerStyle": {
         "borderWidth": 1,
@@ -17,7 +19,7 @@ styles = {
         "borderColor": "#DDD",
         "borderBottomWidth": 0,
         "shadowColor": "#000",
-        "shadowOffset": { "width": 0, "height": 2 },
+        "shadowOffset": {"width": 0, "height": 2},
         "shadowOpacity": 0.1,
         "shadowRadius": 2,
         "elevation": 1,

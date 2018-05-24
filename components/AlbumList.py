@@ -1,20 +1,24 @@
 from Component_py.stubs import require, console, __pragma__  # __:skip
 from Component_py.component import Component
 from components.AlbumDetail import AlbumDetail
+
 React = require("react")
 ScrollView = require("react-native").ScrollView
-fetch = lambda s: None  # __:skip
+def fetch(s): return None  # __:skip
+
 
 class AlbumList(Component):
     def __init__(self, props):
         super().__init__(props)
-        self.state = { "albums": [] }
+        self.state = {"albums": []}
 
     def componentDidMount(self):
         def parse(response):
             return response.json()
+
         def resolve(data):
-            self.setState({ "albums": data })
+            self.setState({"albums": data})
+
         def reject(error):
             console.log(error)
 
