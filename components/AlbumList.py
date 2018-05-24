@@ -4,7 +4,11 @@ from components.AlbumDetail import AlbumDetail
 
 React = require("react")
 ScrollView = require("react-native").ScrollView
-def fetch(s): return None  # __:skip
+
+__pragma__("skip")
+def fetch(s):
+    return None
+__pragma__("noskip")
 
 
 class AlbumList(Component):
