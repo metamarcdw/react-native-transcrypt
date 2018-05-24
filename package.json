@@ -15,7 +15,7 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "jest",
-    "watch": "npx nodemon -e py --watch . --exec \"transcrypt -nb --parent=.none Main.py\""
+    "watch": "npx nodemon -e py --watch . --exec \"transcrypt -mnb --parent=.none Main.py\""
   },
   "jest": {
     "preset": "jest-expo"
